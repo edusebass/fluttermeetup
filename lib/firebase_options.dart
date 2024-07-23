@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -44,37 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB2rKjDbS00gko_FPfSrjtJvXWbD51GHaQ',
-    appId: '1:905282232875:web:1039dac1a12a9cc294806e',
-    messagingSenderId: '905282232875',
-    projectId: 'fir-flutter-codelab-51bea',
-    authDomain: 'fir-flutter-codelab-51bea.firebaseapp.com',
-    storageBucket: 'fir-flutter-codelab-51bea.appspot.com',
+    apiKey: 'AIzaSyDEbvBV1COmuKFAK0IThyoJvjM5o-fYLxM',
+    appId: '1:232023459807:web:a21d22cf5728c73ba9a66a',
+    messagingSenderId: '232023459807',
+    projectId: 'flutter-login-prueba',
+    authDomain: 'flutter-login-prueba.firebaseapp.com',
+    storageBucket: 'flutter-login-prueba.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCY1K8tk5dv36bn_vYJ-b09dre35ZQ641g',
-    appId: '1:905282232875:android:edb92481945523b794806e',
-    messagingSenderId: '905282232875',
-    projectId: 'fir-flutter-codelab-51bea',
-    storageBucket: 'fir-flutter-codelab-51bea.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCtBPIj1PDK6pf3dtkJov6egYWSsz8ixNo',
-    appId: '1:905282232875:ios:0044f32252b49e7a94806e',
-    messagingSenderId: '905282232875',
-    projectId: 'fir-flutter-codelab-51bea',
-    storageBucket: 'fir-flutter-codelab-51bea.appspot.com',
-    iosBundleId: 'com.example.gtkFlutter',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCtBPIj1PDK6pf3dtkJov6egYWSsz8ixNo',
-    appId: '1:905282232875:ios:0044f32252b49e7a94806e',
-    messagingSenderId: '905282232875',
-    projectId: 'fir-flutter-codelab-51bea',
-    storageBucket: 'fir-flutter-codelab-51bea.appspot.com',
-    iosBundleId: 'com.example.gtkFlutter',
+    apiKey: 'AIzaSyAMbnZMu_9yESg9AN9-EMd032fNifcRX0E',
+    appId: '1:232023459807:android:a4351e24304346ffa9a66a',
+    messagingSenderId: '232023459807',
+    projectId: 'flutter-login-prueba',
+    storageBucket: 'flutter-login-prueba.appspot.com',
   );
 }

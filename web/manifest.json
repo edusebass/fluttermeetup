@@ -1,6 +1,6 @@
 {
-    "name": "gtk_flutter",
-    "short_name": "gtk_flutter",
+    "name": "login_firebase_gps_flutter",
+    "short_name": "login_firebase_gps_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

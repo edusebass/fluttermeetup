@@ -1,7 +1,3 @@
-// Copyright 2022 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,28 +15,33 @@ class AuthFunc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 24, bottom: 8),
-          child: StyledButton(
+    return Center( 
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center, 
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 24, bottom: 8),
+            child: StyledButton(
               onPressed: () {
                 !loggedIn ? context.push('/sign-in') : signOut();
               },
-              child: !loggedIn ? const Text('RSVP') : const Text('Logout')),
-        ),
-        Visibility(
-          visible: loggedIn,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 24, bottom: 8),
-            child: StyledButton(
+              child: !loggedIn ? const Text('Comenzar') : const Text('Cerrar Sesión'),
+            ),
+          ),
+          Visibility(
+            visible: loggedIn,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 24, bottom: 8),
+              child: StyledButton(
                 onPressed: () {
                   context.push('/profile');
                 },
-                child: const Text('Profile')),
+                child: const Text('Ver mi perfil'),
+              ),
+            ),
           ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }
